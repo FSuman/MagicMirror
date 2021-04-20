@@ -21,6 +21,7 @@ Module.register("weather", {
 		timeFormat: config.timeFormat,
 		showPeriod: true,
 		showPeriodUpper: false,
+		showWind: true,
 		showWindDirection: true,
 		showWindDirectionAsArrow: false,
 		useBeaufort: true,

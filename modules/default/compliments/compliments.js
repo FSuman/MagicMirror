@@ -8,11 +8,14 @@ Module.register("compliments", {
 	// Module config defaults.
 	defaults: {
 		compliments: {
-			anytime: ["Hey there sexy!"],
-			morning: ["Good morning, handsome!", "Enjoy your day!", "How was your sleep?"],
-			afternoon: ["Hello, beauty!", "You look sexy!", "Looking good today!"],
-			evening: ["Wow, you look hot!", "You look nice!", "Hi, sexy!"],
-			"....-01-01": ["Happy new year!"]
+			anytime: ["Oi Mo", "Bindona!", "Ei, psiu. 😘", "😘", "Vai Palmeiras!", "Pizza!"],
+			morning: ["Uau 😍", "Te amo!", "Bom dia!", "Bom trabalho!"],
+			afternoon: ["Hello, beauty!", "You look sexy!", "Looking good!"],
+			evening: ["Hora de beijinho!", "😴"],
+			"....-01-01": ["Happy new year!"],
+			"....-10-31": ["Happy Halloween!"],
+			"....-12-25": ["Merry Christmas!"],
+			"....-07-01": ["Oh Canada!"]
 		},
 		updateInterval: 30000,
 		remoteFile: null,
@@ -160,7 +163,7 @@ Module.register("compliments", {
 	// Override dom generator.
 	getDom: function () {
 		var wrapper = document.createElement("div");
-		wrapper.className = this.config.classes ? this.config.classes : "thin xlarge bright pre-line";
+		wrapper.className = this.config.classes ? this.config.classes : "thick medium bright pre-line";
 		// get the compliment text
 		var complimentText = this.randomCompliment();
 		// split it into parts on newline text

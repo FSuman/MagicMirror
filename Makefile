@@ -2,7 +2,12 @@ DEPLOY_HOST = 192.168.2.251
 
 
 push:
-	scp -r . pi@$(DEPLOY_HOST):/home/pi/MagicMirror/
+	 rsync -rv ./ pi@192.168.2.251:/home/pi/MagicMirror/ --exclude .git
 
 restart_server:
 	ssh pi@$(DEPLOY_HOST) pm2 restart mm
+
+
+deploy:
+	make push
+	make restart_server

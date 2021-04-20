@@ -1,28 +1,30 @@
 {% if current %}
     {% if not config.onlyTemp %}
         <div class="normal medium">
-            <span class="wi wi-strong-wind dimmed"></span>
-            <span>
-                {% if config.useBeaufort %}
-                    {{ current.beaufortWindSpeed() | round }}
-                {% else %}
-                    {% if config.useKmh %}
-                        {{ current.kmhWindSpeed() | round }}
-                    {% else %}
-                        {{ current.windSpeed | round }}
-                    {% endif %}
-                {% endif %}
-                {% if config.showWindDirection %}
-                    <sup>
-                        {% if config.showWindDirectionAsArrow %}
-                            <i class="fa fa-long-arrow-up" style="transform:rotate({{ current.windDirection }}deg);"></i>
-                        {% else %}
-                            {{ current.cardinalWindDirection() | translate }}
-                        {% endif %}
-                        &nbsp;
-                    </sup>
-                {% endif %}
-            </span>
+            {% if config.showWind %}
+              <span class="wi wi-strong-wind dimmed"></span>
+              <span>
+                  {% if config.useBeaufort %}
+                      {{ current.beaufortWindSpeed() | round }}
+                  {% else %}
+                      {% if config.useKmh %}
+                          {{ current.kmhWindSpeed() | round }}
+                      {% else %}
+                          {{ current.windSpeed | round }}
+                      {% endif %}
+                  {% endif %}
+                  {% if config.showWindDirection %}
+                      <sup>
+                          {% if config.showWindDirectionAsArrow %}
+                              <i class="fa fa-long-arrow-up" style="transform:rotate({{ current.windDirection }}deg);"></i>
+                          {% else %}
+                              {{ current.cardinalWindDirection() | translate }}
+                          {% endif %}
+                          &nbsp;
+                      </sup>
+                  {% endif %}
+              </span>
+            {% endif %}
             {% if config.showHumidity and current.humidity %}
                 <span>{{ current.humidity | decimalSymbol }}</span><sup>&nbsp;<i class="wi wi-humidity humidityIcon"></i></sup>
             {% endif %}
