@@ -9,13 +9,13 @@ Module.register("compliments", {
 	defaults: {
 		compliments: {
 			anytime: ["Oi Mo", "Bindona!", "Ei, psiu. 😘", "😘", "Vai Palmeiras!", "Pizza!"],
-			morning: ["Uau 😍", "Te amo!", "Bom dia!", "Bom trabalho!"],
+			morning: ["Uau 😍", "Te amo!", "Bom dia =D", "Bom trabalho!"],
 			afternoon: ["Hello, beauty!", "You look sexy!", "Looking good!"],
 			evening: ["Hora de beijinho!", "😴"],
 			"....-01-01": ["Happy new year!"],
 			"....-10-31": ["Happy Halloween!"],
 			"....-12-25": ["Merry Christmas!"],
-			"....-07-01": ["Oh Canada!"]
+			"....-07-01": ["Ohh Canada!"]
 		},
 		updateInterval: 30000,
 		remoteFile: null,
