@@ -73,6 +73,10 @@ var config = {
 				apiKey: "49c503b2cfcebe4df338095efb371e1a"
 			}
 		},
+		{
+		   module: "MMM-Anti-Screen-Burn-In",
+		   position: middle
+		},
 	]
 };
 
