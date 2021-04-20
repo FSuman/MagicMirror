@@ -42,7 +42,7 @@
     {% endif %}
     <div class="large light">
         <span class="wi weathericon wi-{{current.weatherType}}"></span>
-        <span class="bright">
+        <span class="bright weather-temperature">
             {{ current.temperature | roundValue | unit("temperature") | decimalSymbol }}
         </span>
     </div>
