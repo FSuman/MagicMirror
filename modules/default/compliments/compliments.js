@@ -28,6 +28,8 @@ Module.register("compliments", {
 		mockDate: null
 	},
 	lastIndexUsed: -1,
+	displayOffline: false,
+	onlineMessages: new Array(),
 	// Set currentweather from module
 	currentWeatherType: "",
 
@@ -83,12 +85,43 @@ Module.register("compliments", {
 		return complimentIndex;
 	},
 
-	/* complimentArray()
+	complimentArray: function () {
+		this.displayOffline = !this.displayOffline;
+		if (!this.displayOffline) {
+			var compliments = this.onlineComplimentArray();
+			if (compliments.length > 0) {
+				return compliments;
+			}
+		}
+		return this.offlineComplimentArray();
+	},
+
+	/* onlineComplimentArray()
 	 * Retrieve an array of compliments for the time of the day.
 	 *
 	 * return compliments Array<String> - Array with compliments for the time of the day.
 	 */
-	complimentArray: function () {
+	onlineComplimentArray: function () {
+		fetch("http://localhost:9003/messages/")
+		.then((res) => {
+			return res.json();
+		})
+		.then((json) => {
+			this.onlineMessages = json["messages"].map(x => x["message"])
+		})
+		.catch(
+			error => console.error('There has been a problem with your fetch operation:', error)
+		);
+
+		return this.onlineMessages;
+		},
+
+	/* offlineComplimentArray()
+	 * Retrieve an array of compliments for the time of the day.
+	 *
+	 * return compliments Array<String> - Array with compliments for the time of the day.
+	 */
+	offlineComplimentArray: function () {
 		var hour = moment().hour();
 		var date = this.config.mockDate ? this.config.mockDate : moment().format("YYYY-MM-DD");
 		var compliments;
@@ -137,7 +170,7 @@ Module.register("compliments", {
 		xobj.send(null);
 	},
 
-	/* complimentArray()
+	/* randomCompliment()
 	 * Retrieve a random compliment.
 	 *
 	 * return compliment string - A compliment.
