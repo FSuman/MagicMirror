@@ -1,0 +1,75 @@
+body {
+  margin: 30px;
+  position: absolute;
+  height: calc(100% - 50px);
+  width: calc(100% - 50px);
+}
+
+.dimmed {
+  color: white;
+}
+
+.normal {
+  color: white;
+}
+
+.clock {
+  transform: scale(2.5);
+  transform-origin: top left;
+}
+
+.bottom .left .container .weather {
+  transform: scale(1.75);
+  transform-origin: bottom left;
+  color: white;
+}
+
+.top .right .container .weather {
+  transform: scale(2.0);
+  transform-origin: top right;
+  color: white;
+}
+
+header {
+  color: white;
+  border-bottom: 2px solid #FFF;
+}
+
+.weather header {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+td.weather-icon {
+  font-size: 40px;
+  padding-right: 16px;
+  line-height: 32px;
+}
+
+.weather .day {
+  padding-left: 0;
+  padding-right: 12px;
+}
+
+.weather .min-temp {
+  padding-left: 12px;
+  padding-right: 0;
+}
+
+.weather .weather-icon {
+    padding-right: 12px;
+    text-align: center;
+}
+
+.large .weathericon {
+  font-size: 100px;
+  line-height: 140px;
+}
+
+.weather-temperature {
+  vertical-align: bottom;
+}
+
+table.small {
+font-size: 22px;
+}
