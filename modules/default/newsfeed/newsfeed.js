@@ -14,6 +14,7 @@ Module.register("newsfeed", {
 				encoding: "UTF-8" //ISO-8859-1
 			}
 		],
+		titleOnly: false,
 		showSourceTitle: true,
 		showPublishDate: true,
 		broadcastNewsFeeds: true,
@@ -25,8 +26,8 @@ Module.register("newsfeed", {
 		lengthDescription: 400,
 		hideLoading: false,
 		reloadInterval: 5 * 60 * 1000, // every 5 minutes
-		updateInterval: 10 * 1000,
-		animationSpeed: 2.5 * 1000,
+		updateInterval: 12.5 * 1000,
+		animationSpeed: 1.5 * 1000,
 		maxNewsItems: 0, // 0 for unlimited
 		ignoreOldItems: false,
 		ignoreOlderThan: 24 * 60 * 60 * 1000, // 1 day

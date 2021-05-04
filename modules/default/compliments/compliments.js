@@ -8,7 +8,7 @@ Module.register("compliments", {
 	// Module config defaults.
 	defaults: {
 		compliments: {
-			anytime: ["Oi Mo", "Bindona!", "Ei, psiu. 😘", "😘", "Vai Palmeiras!", "Pizza!"],
+			anytime: ["Oi Mo", "Bindona!", "Ei, psiu. 😘", "😘"],
 			morning: ["Uau 😍", "Te amo!", "Bom dia =D", "Bom trabalho!"],
 			afternoon: ["Hello, beauty!", "You look sexy!", "Looking good!"],
 			evening: ["Hora de beijinho!", "😴"],
@@ -19,7 +19,7 @@ Module.register("compliments", {
 		},
 		updateInterval: 30000,
 		remoteFile: null,
-		fadeSpeed: 4000,
+		fadeSpeed: 1000,
 		morningStartTime: 3,
 		morningEndTime: 12,
 		afternoonStartTime: 12,
@@ -28,7 +28,6 @@ Module.register("compliments", {
 		mockDate: null
 	},
 	lastIndexUsed: -1,
-	displayOffline: false,
 	onlineMessages: new Array(),
 	// Set currentweather from module
 	currentWeatherType: "",

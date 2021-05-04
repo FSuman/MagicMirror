@@ -1,8 +1,8 @@
 body {
   margin: 30px;
   position: absolute;
-  height: calc(100% - 50px);
-  width: calc(100% - 50px);
+  height: calc(100% - 40px);
+  width: calc(100% - 40px);
 }
 
 .dimmed {
@@ -25,7 +25,7 @@ body {
 }
 
 .top .right .container .weather {
-  transform: scale(2.0);
+  transform: scale(1.8);
   transform-origin: top right;
   color: white;
 }
@@ -38,6 +38,8 @@ header {
 .weather header {
   font-size: 22px;
   margin-bottom: 4px;
+  float: right;
+  max-width: max-content;
 }
 
 td.weather-icon {
@@ -52,12 +54,13 @@ td.weather-icon {
 }
 
 .weather .min-temp {
-  padding-left: 12px;
+  padding-left: 8px;
   padding-right: 0;
 }
 
 .weather .weather-icon {
-    padding-right: 12px;
+    padding-right: 8px;
+    font-size: 35px;
     text-align: center;
 }
 
@@ -71,5 +74,34 @@ td.weather-icon {
 }
 
 table.small {
-font-size: 22px;
+font-size: 30px;
+}
+
+table .day {
+  font-size: 18px;
+  vertical-align: bottom;
+}
+
+.compliments {
+  margin-top: 50px;
+  margin-bottom: 0;
+  max-width: 200px;
+  word-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsfeed {
+  max-width: 600px;
+}
+
+.newsfeed-title {
+  font-size: 36px;
+  line-height: 40px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+   -webkit-line-clamp: 3; /* number of lines to show */
+   -webkit-box-orient: vertical;
 }

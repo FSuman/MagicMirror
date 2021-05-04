@@ -85,7 +85,33 @@ var config = {
 		},
 		{
 		   module: "compliments",
-		   position: "bottom_right"
+		   position: "middle_center"
+
+		},
+		{
+			module: "newsfeed",
+			position: "bottom_right",
+			config: {
+				feeds: [
+					{
+						title: "CBC",
+						url: "https://rss.cbc.ca/lineup/topstories.xml"
+					},
+					{
+						title: "uol",
+						url: "http://rss.uol.com.br/feed/noticias.xml"
+					},
+					{
+						title: "CTV News",
+						url: "https://www.ctvnews.ca/rss/ctvnews-ca-canada-public-rss-1.822284"
+					}
+				],
+				showSourceTitle: true,
+				showPublishDate: true,
+				broadcastNewsFeeds: true,
+				broadcastNewsUpdates: true,
+				titleOnly: true
+			}
 		},
 	]
 };
