@@ -62,7 +62,7 @@ var config = {
 				roundTemp: true,
 				location: "Mississauga",
 				locationID: "6075357",
-				apiKey: "49c503b2cfcebe4df338095efb371e1a"
+				apiKey: "<INSERT_API_KEY_HERE>"
 			}
 		},
 		{
@@ -76,7 +76,7 @@ var config = {
 				roundTemp: true,
 				location: "Mississauga",
 				locationID: "6075357",
-				apiKey: "49c503b2cfcebe4df338095efb371e1a"
+				apiKey: "<INSERT_API_KEY_HERE>"
 			}
 		},
 		{
