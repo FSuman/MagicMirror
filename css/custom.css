@@ -24,9 +24,9 @@ body {
   color: white;
 }
 
-.top .right .container .weather {
-  transform: scale(1.8);
-  transform-origin: top right;
+.bottom .right .container .weather {
+  transform: scale(2.2);
+  transform-origin: bottom right;
   color: white;
 }
 
@@ -85,10 +85,18 @@ table .day {
 .compliments {
   margin-top: 50px;
   margin-bottom: 0;
-  max-width: 200px;
+  max-width: 420px;
   word-wrap: break-word;
   margin-left: auto;
   margin-right: auto;
+}
+
+.compliments .module-content div span {
+  font-size: 42px;
+  line-height: 45px;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  margin-right: 85px;
 }
 
 .newsfeed {
